@@ -1,0 +1,64 @@
+body {
+  background: $white;
+  margin: 0;
+}
+.head {
+  background-image: url(../img/starsnight.png);
+  height: 100vh;
+  .container {
+    @extend %container;
+  }
+}
+.railtrips {
+  padding-top: 212px;
+  h1 {
+    margin: 0;
+    width: 70%;
+    font-size: 65px;
+    line-height: 120%;
+    color: $white;
+    font-family: Gelasio-Bold;
+  }
+  p {
+    margin: 30px 0 40px;
+    width: 40%;
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    line-height: 160%;
+    color: $white;
+    opacity: 0.6;
+  }
+  button {
+    @include button;
+    span {
+      @include span;
+      padding: 17px 46px;
+    }
+  }
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(
+      115deg,
+      #4fcf70,
+      #fad648,
+      #a767e5,
+      #12bcfe,
+      #44ce7b
+    );
+    background-size: 50% 100%;
+    border-radius: inherit;
+  }
+  button:hover::before {
+    animation: animate_border 0.75s linear infinite;
+  }
+  @keyframes animate_border {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}

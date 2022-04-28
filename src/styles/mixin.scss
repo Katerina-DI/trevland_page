@@ -1,0 +1,31 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+@mixin span {
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  line-height: 150%;
+  display: block;
+  background-color: #a62017;
+
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+}

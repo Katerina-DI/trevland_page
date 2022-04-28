@@ -1,0 +1,34 @@
+{
+  "name": "trevland_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katerina-DI/trevland_page.git"
+  },
+  "author": "katerina_di",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katerina-DI/trevland_page/issues"
+  },
+  "homepage": "https://github.com/Katerina-DI/trevland_page#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "pump": "^3.0.0",
+    "sass": "^1.51.0"
+  }
+}

@@ -1,0 +1,102 @@
+.nav {
+  padding-top: 35px;
+  @include flex-row;
+  justify-content: space-between;
+  .logo {
+    font-family: Ribeye;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    color: $white;
+  }
+  .menu {
+    @media (max-width: $md) {
+      display: none;
+    }
+    a {
+      font-size: 18px;
+      line-height: 150%;
+      font-family: Roboto-Medium;
+      color: $white;
+      padding: 0 25px;
+      text-decoration: none;
+    }
+  }
+  .hamburger-menu {
+    display: none;
+
+    #menu__toogle {
+      opacity: 0;
+    }
+    .menu__btn {
+      display: flex;
+      align-items: center;
+
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: $white;
+    }
+    .menu__btn > span::before {
+      content: "";
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: "";
+      top: 8px;
+    }
+    #menu__toogle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toogle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
+    }
+    #menu__toogle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    .menu__box {
+      display: block;
+      visibility: hidden;
+      top: 0;
+      margin: 0;
+      padding-left: 2px;
+      list-style: none;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+    #menu__toogle:checked ~ .menu__box {
+      visibility: visible;
+      left: 0;
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: $white;
+      font-family: Roboto-Medium;
+      font-size: 18px;
+      line-height: 150%;
+      text-decoration: none;
+    }
+    .menu__item:hover {
+      background-color: #a62017;
+    }
+    // открытие закрытие чекбокса
+  }
+  .hamburger-menu {
+    @media (max-width: $md) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
